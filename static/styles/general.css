@@ -255,3 +255,25 @@ body {
 .view-users-link:hover {
     background: rgba(255, 255, 255, 0.2);
 }
+
+/* Estilos para dispositivos con un ancho máximo de 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-label {
+        font-size: 1em;
+    }
+    .form-input {
+        font-size: 1em;
+        padding: 10px;
+    }
+    .register-button {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
