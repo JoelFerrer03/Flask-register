@@ -1,0 +1,257 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para mensajes flash */
+.flash-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 90%;
+    max-width: 500px;
+}
+
+.flash-message {
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.flash-success {
+    background-color: #28a745;
+}
+
+.flash-danger {
+    background-color: #dc3545;
+}
+
+.flash-info {
+    background-color: #17a2b8;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Estilo para el contenedor principal */
+.content-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+/* Estilo del contenedor de usuarios */
+.users-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 8px 16px #00ffee;
+    text-align: center;
+    margin: 50px auto;
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+.users-container:hover {
+    transform: translateY(-5px);
+}
+
+.users-title {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+/* Estilo de la tabla */
+.users-table-container {
+    overflow-x: auto;
+    border-radius: 15px;
+    color: dimgrey;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ffffff;
+    color: #fff;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.users-table thead {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.users-table th, .users-table td {
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+}
+/* Cambiar el color del texto en las celdas de los usuarios */
+.users-table tbody td {
+    color: rgb(80, 86, 113);
+}
+
+
+.users-table tbody tr {
+    transition: background 0.3s ease;
+}
+
+.users-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.users-table tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.users-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.no-users {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* Botón de regreso */
+.users-back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+.users-back-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Container */
+.register-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px #00ffee;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.register-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Title */
+.register-title {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-input {
+    width: 92%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    outline: none;
+    color: #333;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.form-input:focus {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Button */
+.register-button {
+    background: #ffffff;
+    color: #6e45e2;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.register-button:hover {
+    background: #dddddd;
+}
+
+/* Link */
+.view-users-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.view-users-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

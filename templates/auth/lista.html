@@ -1,0 +1,40 @@
+{% extends "auth/Base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+
+<div class="users-container">
+    <h2 class="users-title">Usuarios Registrados</h2>
+
+    <div class="users-table-container">
+        <table class="users-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre de Usuario</th>
+                    <th>Correo Electrónico</th>
+                    <th>Teléfono</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if usuarios %}
+                    {% for i, usuario in usuarios %}
+                    <tr>
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ usuario.username }}</td>
+                        <td>{{ usuario.email }}</td>
+                        <td>{{ usuario.telefono }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4" class="no-users">No hay usuarios registrados aún.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <a href="/" class="users-back-link">Volver al Registro</a>
+</div>
+{% endblock %}
